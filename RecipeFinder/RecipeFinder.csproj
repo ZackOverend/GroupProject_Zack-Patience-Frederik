@@ -57,10 +57,8 @@
 
 	<ItemGroup>
 	  <None Remove="App Classes\" />
-	  <None Remove="Pages\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="BusinessLogic\" />
-	  <Folder Include="Pages\" />
+	  <Folder Include="App Classes\" />
 	</ItemGroup>
 </Project>
