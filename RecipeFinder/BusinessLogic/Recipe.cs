@@ -2,12 +2,12 @@
 namespace RecipeFinder.BusinessLogic
 {
     public class Recipe
-    { 
-        private int _recipeId;
+    {
+
         private string _recipeDesc;
         private string _recipeName;
         private string _recipeImage;
-        public int RecipeId { get { return _recipeId; } }
+        private string _recipeInstructions;
 
         public string RecipeDesc
         {
@@ -42,16 +42,32 @@ namespace RecipeFinder.BusinessLogic
                 _recipeImage = value;
             }
         }
-
-
-        public Recipe(int recipeId, string recipeDesc, string recipeName, string recipeImage)
+        public string RecipeInstructions
         {
-            _recipeId = recipeId;
-            RecipeDesc = recipeDesc;
-            RecipeName = recipeName;
-            RecipeImage = recipeImage;
-
+            get
+            {
+                return _recipeInstructions;
+            }
+            set
+            {
+                _recipeInstructions = value;
+            }
         }
+
+
+
+
+
+        public Recipe(string recipeName, string recipeDesc, string recipeImage, string recipeInstructions)
+        {
+
+            RecipeName = recipeName;
+            RecipeDesc = recipeDesc;
+            RecipeImage = recipeImage;
+            RecipeInstructions = recipeInstructions;
+        }
+
+
     }
 }
 

@@ -34,8 +34,8 @@ namespace RecipeFinder.BusinessLogic
         }
 
 
-        public DietRecipe(int recipeId, string recipeDesc, string recipeName, string recipeImage, bool isVegetarian, bool isVegan, bool isDairyFree)
-            : base(recipeId, recipeDesc, recipeName, recipeImage)
+        public DietRecipe(string recipeDesc, string recipeName, string recipeImage, string recipeInstructions, bool isVegetarian, bool isVegan, bool isDairyFree)
+            : base(recipeDesc, recipeName, recipeImage, recipeInstructions)
         {
             _isVegetarian = isVegetarian;
             _isVegan = isVegan;

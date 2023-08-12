@@ -5,8 +5,51 @@
              Title="RecipeManagerPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Choose a Recipe From the List below"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            FontSize="30"
+            TextColor="Aqua"/>
+        
+
+        <ListView
+            x:Name="RecipeListView"
+            ItemsSource="{Binding PassedUser.RecipeManager.RecipeList}"
+            SelectedItem="{Binding SelectedRecipe, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <VerticalStackLayout>
+
+
+                            <Label
+                                Text="{Binding RecipeName}"
+                                />
+
+
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <HorizontalStackLayout HorizontalOptions="Center" Padding="20">
+       
+        
+        <Button
+            x:Name="ViewRecipeButton"
+            Text="View Recipe"
+            Clicked="ViewRecipeButton_Clicked"
+            HorizontalOptions="Center"/>
+            <Label
+            Padding="10"/>
+        
+         <Button
+            x:Name="BackButton"
+            Text="Back to User Page"
+            Clicked="BackButton_Clicked"
+            HorizontalOptions="Center"
+            />
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
