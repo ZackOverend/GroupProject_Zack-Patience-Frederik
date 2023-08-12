@@ -5,8 +5,68 @@
              Title="UserEditPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Choose a User to edit below!"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            FontSize="40"
+            TextColor="Aqua"/>
+
+        <ListView VerticalOptions="CenterAndExpand"
+            x:Name="UserEditListView"
+            ItemsSource="{Binding PassedUserManager.UserList}"
+            SelectedItem="{Binding SelectedUser, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <VerticalStackLayout>
+                            
+                            <Label
+                                Text="{Binding UserText}"
+                                FontSize="Body"
+                                FontAttributes="Bold"
+                                TextColor="White"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                />
+
+
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label
+            Padding="10"
+            />
+
+        <HorizontalStackLayout HorizontalOptions="Center">
+        <Button
+            x:Name="AddUserButton"
+            Text="Add User"
+            Clicked="AddUserButton_Clicked"
+            HorizontalOptions="Center"/>
+        
+        <Label
+            Padding="10"
+            />
+        <Button
+            x:Name="RemoveUserButton"
+            Text="Remove User"
+            Clicked="RemoveUserButton_Clicked"
+            HorizontalOptions="Center"/>
+        
+        <Label
+            Padding="10"
+            />
+        <Button
+            x:Name="BackButton"
+            Text="Back to User Page"
+            Clicked="BackButton_Clicked"
+            HorizontalOptions="Center"/>
+
+        </HorizontalStackLayout>
+
+
     </VerticalStackLayout>
 </ContentPage>
