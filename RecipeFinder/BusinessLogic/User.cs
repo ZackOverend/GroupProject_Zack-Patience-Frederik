@@ -1,18 +1,29 @@
 ﻿using System;
 namespace RecipeFinder.BusinessLogic;
 
+
 public class User
 {
+
     private int _userId;
     private string _name;
     private string _email;
     private string _phoneNumber;
+    private FavouritesManager _userFavourites = new FavouritesManager();
+    private RecipeManager _recipeManager = new RecipeManager();
+
+    public FavouritesManager UserFavourites { get { return _userFavourites; } }
+    public RecipeManager RecipeManager { get { return _recipeManager; } }
 
     public int UserId
     {
         get
         {
             return _userId;
+        }
+        set
+        {
+            _userId = value;
         }
     }
 
@@ -61,12 +72,16 @@ public class User
         }
     }
 
-    public User(int userId, string name, string email, string phoneNumber)
+
+
+    public User(int userId, string name, string email, string phoneNumber, FavouritesManager userFavourites, RecipeManager recipeManager)
     {
         _userId = userId;
         Name = name;
         Email = email;
         PhoneNumber = phoneNumber;
+        _userFavourites = userFavourites;
+        _recipeManager = recipeManager;
     }
 
     public string GetText()
@@ -78,6 +93,6 @@ public class User
     {
         get { return GetText(); }
     }
-}
 
+}
 
