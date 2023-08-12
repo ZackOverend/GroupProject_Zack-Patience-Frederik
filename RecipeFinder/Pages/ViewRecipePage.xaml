@@ -5,8 +5,39 @@
              Title="ViewRecipePage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="{Binding PassedRecipe.RecipeName}"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            Padding="10"
+            FontSize="30"
+            TextColor="Aqua"/>
+
+        <Label
+            Padding="50"/>
+
+        <Label
+            Text="{Binding PassedRecipe.RecipeDesc}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+
+            />
+
+
+
+        <HorizontalStackLayout HorizontalOptions="Center" Padding="100">
+        <Button
+            x:Name="AddToFavourites"
+            Text="Add to Favourites"
+            Clicked="AddToFavourites_Clicked"
+            
+            />
+        <Label
+            Padding="10"/>
+        <Button
+            x:Name="GoBackBtn"
+            Text="Go Back"
+            Clicked="GoBackBtn_Clicked"
+            />
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

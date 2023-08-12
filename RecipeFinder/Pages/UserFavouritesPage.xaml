@@ -5,8 +5,64 @@
              Title="UserFavouritesPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Favourite Recipes!"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            TextColor="Aqua"
+            FontSize="30"/>
+
+        <ListView
+            x:Name="FavouritesListView"
+            ItemsSource="{Binding PassedUser.UserFavourites.FavouritesList}"
+            SelectedItem="{Binding SelectedFavourite, Mode = TwoWay}">
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                        <VerticalStackLayout>
+                            
+                            <Label
+                                Text="{Binding RecipeName}"
+                                FontSize="Body"
+                                FontAttributes="Bold"
+                                TextColor="White"
+                                VerticalOptions="Center"
+                                Padding="10"
+                                />
+                            
+
+
+                        </VerticalStackLayout>
+                    </ViewCell.View>
+                  </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label
+            Padding="100"/>
+
+
+        <Button
+            x:Name="ExportBtn"
+            Text="Export"
+            Clicked="ExportBtn_Clicked"
+            WidthRequest="150"/>
+        <Label
+            Padding="10"/>
+        <Button
+            x:Name="RemoveFavouriteBtn"
+            Text="Remove from list"
+            Clicked="RemoveFavouriteBtn_Clicked"
+            WidthRequest="150"/>
+        <Label
+            Padding="10"/>
+        <Button
+            x:Name="BackBtnFavourites"
+            Text="Go Back"
+            Clicked="BackBtnFavourites_Clicked"
+            WidthRequest="150"/>
+
     </VerticalStackLayout>
 </ContentPage>
