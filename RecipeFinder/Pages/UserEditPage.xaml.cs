@@ -1,4 +1,4 @@
-﻿namespace GroupProjectPractice.Pages;
+﻿namespace RecipeFinder.Pages;
 using RecipeFinder.BusinessLogic;
 public partial class UserEditPage : ContentPage
 {

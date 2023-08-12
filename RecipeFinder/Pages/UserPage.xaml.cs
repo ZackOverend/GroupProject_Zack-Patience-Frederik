@@ -1,6 +1,5 @@
-﻿namespace GroupProjectPractice.Pages;
+﻿namespace RecipeFinder.Pages;
 using RecipeFinder.BusinessLogic;
-using RecipeFinder.Pages;
 
 public partial class UserPage : ContentPage
 {
