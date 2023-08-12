@@ -3,10 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RecipeFinder.Pages.AddUserPage"
              Title="AddUserPage">
-    <VerticalStackLayout>
+    <VerticalStackLayout Padding="20">
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Add a User!"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            FontSize="30"
+            TextColor="Aqua"
+            Padding="30"/>
+
+        
+            <Entry
+                x:Name="NameEntry"
+                Placeholder="Enter Your Name"
+            />
+            <Entry
+                x:Name="EmailEntry"
+                Placeholder="Enter Your Email"
+            />
+            <Entry
+                x:Name="PhoneNumberEntry"
+                Placeholder="Enter Your Phone Number"
+            />
+
+        
+        <Label
+            Padding="10"/>
+        
+        <Button
+            x:Name="AddUserButton"
+            Text="Add User"
+            Clicked="AddUserButton_Clicked"
+            HorizontalOptions="Center"
+            />
+        <Label
+            Padding="10"/>
+        <Button
+            x:Name="BackButton"
+            Text="Back to Edit User Page"
+            Clicked="BackButton_Clicked"
+            HorizontalOptions="Center"/>
+        
     </VerticalStackLayout>
 </ContentPage>
