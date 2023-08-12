@@ -1,5 +1,7 @@
-﻿namespace RecipeFinder.Pages;
+﻿namespace GroupProjectPractice.Pages;
 using RecipeFinder.BusinessLogic;
+using RecipeFinder.Pages;
+
 public partial class UserPage : ContentPage
 {
 
@@ -7,6 +9,22 @@ public partial class UserPage : ContentPage
 
     public UserManager UserManager { get { return _userManager; } }
 
+    private User _selectedUser;
+
+    public User SelectedUser
+    {
+        get
+        {
+            return _selectedUser;
+        }
+        set
+        {
+            if (_selectedUser == value)
+                return;
+            _selectedUser = value;
+            OnPropertyChanged();
+        }
+    }
 
 
 
@@ -21,17 +39,25 @@ public partial class UserPage : ContentPage
 
     }
 
-
-
     void EditUsersButton_Clicked(System.Object sender, System.EventArgs e)
     {
-        UserEditPage usereditpage = new UserEditPage(UserManager);
-        Navigation.PushAsync(usereditpage);
+        UserEditPage userEditPage = new UserEditPage(UserManager);
+        Navigation.PushAsync(userEditPage);
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        UserListView.ItemsSource = null;
+        UserListView.ItemsSource = UserManager.UserList;
     }
 
     void ContinueButton_Clicked(System.Object sender, System.EventArgs e)
     {
-        RecipeManagerPage recipeManagerPage = new RecipeManagerPage();
-        Navigation.PushAsync(recipeManagerPage);
+        HomePage homePage = new HomePage(_selectedUser);
+        Navigation.PushAsync(homePage);
+
+
     }
+
 }

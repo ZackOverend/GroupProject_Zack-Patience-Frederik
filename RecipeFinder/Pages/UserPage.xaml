@@ -2,11 +2,76 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RecipeFinder.Pages.UserPage"
-             Title="UserPage">
+             Title="Recipe Picker">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Welcome to the Recipe Picker!"
+            FontSize="40"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            TextColor="Aqua"/>
+
+        <Label 
+            Text="The Tool To Help Inspire Your Next Meal!"
+            FontSize="25"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            />
+        <Label 
+            Text="Please pick a user from the list below, or add your own!"
+            FontSize="Body"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Padding="30"/>
+
+        <ListView
+            x:Name="UserListView"
+            ItemsSource="{Binding UserManager.UserList}"
+            SelectedItem="{Binding SelectedUser, Mode = TwoWay}">
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            
+                            <Label
+                                Text="{Binding UserText}"
+                                FontSize="Body"
+                                FontAttributes="Bold"
+                                TextColor="White"
+                                VerticalOptions="Center"
+                                />
+                            
+
+
+                        </VerticalStackLayout>
+                    </ViewCell.View>
+                  </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <HorizontalStackLayout HorizontalOptions="Center" Padding="20">
+        <Label
+            Text=""
+            Padding="10"
+            />
+        <Button
+            x:Name="ContinueButton"
+            Text="Explore!"
+            Clicked="ContinueButton_Clicked"
+            HorizontalOptions="Center"/>
+        <Label
+            Padding="10"
+            />
+        <Button
+            x:Name="EditUsersButton"
+            Text="Edit Users"
+            Clicked="EditUsersButton_Clicked"
+            HorizontalOptions="Center"
+            />
+        </HorizontalStackLayout>
+
     </VerticalStackLayout>
 </ContentPage>
