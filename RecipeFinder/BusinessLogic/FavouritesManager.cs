@@ -1,5 +1,5 @@
 ﻿using System;
-namespace RecipeFinder.AppClasses
+namespace RecipeFinder.BusinessLogic
 {
 	public class FavouritesManager
 	{
