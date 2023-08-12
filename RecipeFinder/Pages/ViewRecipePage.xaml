@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RecipeFinder.Pages.ViewRecipePage"
              Title="ViewRecipePage">
-    <VerticalStackLayout>
+        <VerticalStackLayout>
         <Label 
             Text="{Binding PassedRecipe.RecipeName}"
             VerticalOptions="Center" 
@@ -12,8 +12,14 @@
             FontSize="30"
             TextColor="Aqua"/>
 
+        <Image
+            Source="{Binding PassedRecipe.RecipeImage}"
+            MaximumHeightRequest="300"
+            MaximumWidthRequest="200"/>
+
         <Label
-            Padding="50"/>
+            Padding="10"/>
+
 
         <Label
             Text="{Binding PassedRecipe.RecipeDesc}"
@@ -22,6 +28,12 @@
 
             />
 
+        <Label
+            Padding="30"/>
+
+        <Label
+            Text="{Binding PassedRecipe.RecipeInstructions}"
+            />
 
 
         <HorizontalStackLayout HorizontalOptions="Center" Padding="100">

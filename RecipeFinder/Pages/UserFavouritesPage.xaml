@@ -44,13 +44,7 @@
             Padding="100"/>
 
 
-        <Button
-            x:Name="ExportBtn"
-            Text="Export"
-            Clicked="ExportBtn_Clicked"
-            WidthRequest="150"/>
-        <Label
-            Padding="10"/>
+        <HorizontalStackLayout HorizontalOptions="Center">
         <Button
             x:Name="RemoveFavouriteBtn"
             Text="Remove from list"
@@ -63,6 +57,7 @@
             Text="Go Back"
             Clicked="BackBtnFavourites_Clicked"
             WidthRequest="150"/>
+        </HorizontalStackLayout>
 
     </VerticalStackLayout>
 </ContentPage>

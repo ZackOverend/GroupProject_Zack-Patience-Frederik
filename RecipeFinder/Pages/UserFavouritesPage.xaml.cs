@@ -3,6 +3,7 @@ using RecipeFinder.BusinessLogic;
 
 public partial class UserFavouritesPage : ContentPage
 {
+    
     private User _passedUser;
 
     public User PassedUser { get { return _passedUser; } }
@@ -30,10 +31,7 @@ public partial class UserFavouritesPage : ContentPage
         BindingContext = this;
     }
 
-    void ExportBtn_Clicked(System.Object sender, System.EventArgs e)
-    {
 
-    }
 
     void RemoveFavouriteBtn_Clicked(System.Object sender, System.EventArgs e)
     {
@@ -45,6 +43,7 @@ public partial class UserFavouritesPage : ContentPage
     {
         Navigation.PopAsync();
     }
+
 
 
 }
