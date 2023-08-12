@@ -9,19 +9,27 @@ namespace RecipeFinder.BusinessLogic;
 
         public List<User> UserList { get { return _userList; } }
 
+        private FavouritesManager _userFavourites;
+        public FavouritesManager UserFavourites { get { return _userFavourites; } }
 
-        public UserManager()
+    public UserManager()
         {
 
         }
 
         public void AddUser(string name, string email, string phoneNumber)
         {
-            _userId++;
-            User user = new User(_userId, name, email, phoneNumber);
+        // Increment the user Id
+        _userId++;
 
-            _userList.Add(user);
-        }
+        // Create an instance of Favourites Manager
+        FavouritesManager userFavourites = new FavouritesManager();
+        RecipeManager recipeManager = new RecipeManager();
+
+        User user = new User(_userId, name, email, phoneNumber, userFavourites, recipeManager);
+
+        _userList.Add(user);
+    }
 
         public void RemoveUser(User selectedUser)
         {
