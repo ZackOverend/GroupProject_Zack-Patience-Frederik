@@ -57,8 +57,50 @@
 
 	<ItemGroup>
 	  <None Remove="App Classes\" />
+	  <None Remove="Resources\Images\beefstew.png" />
+	  <None Remove="Resources\Images\beefstirfry.png" />
+	  <None Remove="Resources\Images\beeftacos.png" />
+	  <None Remove="Resources\Images\blueberrypancakes.png" />
+	  <None Remove="Resources\Images\caesarsalad.png" />
+	  <None Remove="Resources\Images\capresesalad.png" />
+	  <None Remove="Resources\Images\chickentikkamasala.png" />
+	  <None Remove="Resources\Images\chocolatechipcookies.png" />
+	  <None Remove="Resources\Images\fruitsalad.png" />
+	  <None Remove="Resources\Images\guacamole.png" />
+	  <None Remove="Resources\Images\homestylechili.png" />
+	  <None Remove="Resources\Images\lemonherbgrilledchicken.png" />
+	  <None Remove="Resources\Images\margaritapizza.png" />
+	  <None Remove="Resources\Images\omelette.png" />
+	  <None Remove="Resources\Images\pastaprimavera.png" />
+	  <None Remove="Resources\Images\ratatouille.png" />
+	  <None Remove="Resources\Images\shrimpscampi.png" />
+	  <None Remove="Resources\Images\spaghetticarbonara.png" />
+	  <None Remove="Resources\Images\sushirolls.png" />
+	  <None Remove="Resources\Images\vegetablecurry.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="App Classes\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\beefstew.png" />
+	  <BundleResource Include="Resources\Images\beefstirfry.png" />
+	  <BundleResource Include="Resources\Images\beeftacos.png" />
+	  <BundleResource Include="Resources\Images\blueberrypancakes.png" />
+	  <BundleResource Include="Resources\Images\caesarsalad.png" />
+	  <BundleResource Include="Resources\Images\capresesalad.png" />
+	  <BundleResource Include="Resources\Images\chickentikkamasala.png" />
+	  <BundleResource Include="Resources\Images\chocolatechipcookies.png" />
+	  <BundleResource Include="Resources\Images\fruitsalad.png" />
+	  <BundleResource Include="Resources\Images\guacamole.png" />
+	  <BundleResource Include="Resources\Images\homestylechili.png" />
+	  <BundleResource Include="Resources\Images\lemonherbgrilledchicken.png" />
+	  <BundleResource Include="Resources\Images\margaritapizza.png" />
+	  <BundleResource Include="Resources\Images\omelette.png" />
+	  <BundleResource Include="Resources\Images\pastaprimavera.png" />
+	  <BundleResource Include="Resources\Images\ratatouille.png" />
+	  <BundleResource Include="Resources\Images\shrimpscampi.png" />
+	  <BundleResource Include="Resources\Images\spaghetticarbonara.png" />
+	  <BundleResource Include="Resources\Images\sushirolls.png" />
+	  <BundleResource Include="Resources\Images\vegetablecurry.png" />
 	</ItemGroup>
 </Project>
