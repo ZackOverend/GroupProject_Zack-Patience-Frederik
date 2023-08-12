@@ -15,6 +15,7 @@ namespace RecipeFinder.BusinessLogic
             _recipeList.Add(new Recipe("r1", "r2", "r3", "r4"));
             _recipeList.Add(new Recipe("r1", "r2", "r3", "r4"));
             _recipeList.Add(new Recipe("r1", "r2", "r3", "r4"));
+            _recipeList.Add(new DietRecipe("d1", "d2", "d3", "d4", false, false, false));
 
 
 

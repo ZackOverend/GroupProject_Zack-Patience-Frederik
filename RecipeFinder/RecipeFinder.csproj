@@ -77,6 +77,7 @@
 	  <None Remove="Resources\Images\spaghetticarbonara.png" />
 	  <None Remove="Resources\Images\sushirolls.png" />
 	  <None Remove="Resources\Images\vegetablecurry.png" />
+	  <None Remove="Resources\Images\foodlogo.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="App Classes\" />
@@ -102,5 +103,6 @@
 	  <BundleResource Include="Resources\Images\spaghetticarbonara.png" />
 	  <BundleResource Include="Resources\Images\sushirolls.png" />
 	  <BundleResource Include="Resources\Images\vegetablecurry.png" />
+	  <BundleResource Include="Resources\Images\foodlogo.svg" />
 	</ItemGroup>
 </Project>
