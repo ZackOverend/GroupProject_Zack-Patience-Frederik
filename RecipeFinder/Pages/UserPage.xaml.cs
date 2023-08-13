@@ -7,8 +7,8 @@ public partial class UserPage : ContentPage
     UserManager _userManager = new UserManager();
 
     public UserManager UserManager { get { return _userManager; } }
-
     private User _selectedUser;
+
 
     public User SelectedUser
     {
@@ -23,6 +23,8 @@ public partial class UserPage : ContentPage
             _selectedUser = value;
             OnPropertyChanged();
         }
+
+        
     }
 
 
@@ -58,5 +60,4 @@ public partial class UserPage : ContentPage
 
 
     }
-
 }

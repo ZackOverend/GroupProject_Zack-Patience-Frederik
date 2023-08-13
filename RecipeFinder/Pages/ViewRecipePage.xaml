@@ -12,6 +12,15 @@
             FontSize="30"
             TextColor="Aqua"/>
 
+        <Label
+            x:Name="lblDietaryStatus"
+            Text=""
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Padding="10"
+            FontSize="30"
+            />
+
         <Image
             Source="{Binding PassedRecipe.RecipeImage}"
             MaximumHeightRequest="300"

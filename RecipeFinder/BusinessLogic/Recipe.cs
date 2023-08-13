@@ -4,22 +4,11 @@ namespace RecipeFinder.BusinessLogic
     public class Recipe
     {
 
-        private string _recipeDesc;
         private string _recipeName;
+        private string _recipeDesc;
         private string _recipeImage;
         private string _recipeInstructions;
 
-        public string RecipeDesc
-        {
-            get
-            {
-                return _recipeDesc;
-            }
-            set
-            {
-                _recipeDesc = value;
-            }
-        }
         public string RecipeName
         {
             get
@@ -29,6 +18,17 @@ namespace RecipeFinder.BusinessLogic
             set
             {
                 _recipeName = value;
+            }
+        }
+        public string RecipeDesc
+        {
+            get
+            {
+                return _recipeDesc;
+            }
+            set
+            {
+                _recipeDesc = value;
             }
         }
         public string RecipeImage
@@ -54,18 +54,18 @@ namespace RecipeFinder.BusinessLogic
             }
         }
 
+       
 
+        // Due to csvhelper, there is no need for a class constructor. The serialization and deserialization is handled by the public properties
 
+        //public Recipe(string rname, string recipeDesc, string recipeImage, string recipeInstructions)
+        //{
 
-
-        public Recipe(string recipeName, string recipeDesc, string recipeImage, string recipeInstructions)
-        {
-
-            RecipeName = recipeName;
-            RecipeDesc = recipeDesc;
-            RecipeImage = recipeImage;
-            RecipeInstructions = recipeInstructions;
-        }
+        //    RecipeName = rname;
+        //    RecipeDesc = recipeDesc;
+        //    RecipeImage = recipeImage;
+        //    RecipeInstructions = recipeInstructions;
+        //}
 
 
     }

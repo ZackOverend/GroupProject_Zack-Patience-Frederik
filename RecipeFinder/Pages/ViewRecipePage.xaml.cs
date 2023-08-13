@@ -15,6 +15,7 @@ public partial class ViewRecipePage : ContentPage
         InitializeComponent();
         _passedUser = passedUser;
         _passedRecipe = passedRecipe;
+
         BindingContext = this;
     }
 

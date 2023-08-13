@@ -8,13 +8,15 @@ namespace RecipeFinder.BusinessLogic
 
         private bool _isVegan;
 
-        private bool _isDairyFree;
-
         public bool IsVegetarian
         {
             get
             {
                 return _isVegetarian;
+            }
+            set
+            {
+                _isVegetarian = value;
             }
         }
         public bool IsVegan
@@ -23,24 +25,20 @@ namespace RecipeFinder.BusinessLogic
             {
                 return _isVegan;
             }
-        }
-
-        public bool IsDairyFree
-        {
-            get
+            set
             {
-                return _isDairyFree;
+                _isVegan = value;
             }
         }
 
 
-        public DietRecipe(string recipeDesc, string recipeName, string recipeImage, string recipeInstructions, bool isVegetarian, bool isVegan, bool isDairyFree)
-            : base(recipeDesc, recipeName, recipeImage, recipeInstructions)
-        {
-            _isVegetarian = isVegetarian;
-            _isVegan = isVegan;
-            _isDairyFree = isDairyFree;
-        }
+        //public DietRecipe(string recipeDesc, string recipeName, string recipeImage, string recipeInstructions, bool isVegetarian, bool isVegan, bool isDairyFree)
+        //    : base(recipeDesc, recipeName, recipeImage, recipeInstructions)
+        //{
+        //    _isVegetarian = isVegetarian;
+        //    _isVegan = isVegan;
+        //    _isDairyFree = isDairyFree;
+        //}
     }
 }
 
