@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Author: Zack
+
+// RecipeManager Class is responsible for creating the list of recipes, populating it through the use of a csv that is created and read in this class 
+using System;
 using CsvHelper;
 using CsvHelper.Configuration;
 using System.Collections.Generic;
@@ -11,11 +14,14 @@ namespace RecipeFinder.BusinessLogic
 {
     public class RecipeManager
     {
+        // Instantiate the recipe lists 
         private List<Recipe> _recipeList = new List<Recipe>();
         public List<Recipe> RecipeList { get { return _recipeList; } }
 
         public RecipeManager()
         {
+
+            // This is where we implement each csv item
 
             AddRecipe(new Recipe
             {
