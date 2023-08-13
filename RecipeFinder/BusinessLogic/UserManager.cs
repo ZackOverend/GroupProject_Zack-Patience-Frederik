@@ -1,6 +1,11 @@
 ﻿using System;
 namespace RecipeFinder.BusinessLogic;
 
+    //Frederik
+
+    //UserManager contains methods to add and remove users, as well as sets up lists for listview
+
+
 	public class UserManager
 	{
         private int _userId = 1000;
@@ -12,11 +17,7 @@ namespace RecipeFinder.BusinessLogic;
         private FavouritesManager _userFavourites;
         public FavouritesManager UserFavourites { get { return _userFavourites; } }
 
-    public UserManager()
-        {
-
-        }
-
+        //Method to add user with parameters, as well as making sure the id is always incremented, creating unique id's
         public void AddUser(string name, string email, string phoneNumber)
         {
         // Increment the user Id
@@ -30,7 +31,7 @@ namespace RecipeFinder.BusinessLogic;
 
         _userList.Add(user);
     }
-
+        //Creates method that cycles through each user and deletes if a matching one is found compared to the selected one. 
         public void RemoveUser(User selectedUser)
         {
             List<User> tempList = new List<User>(_userList);

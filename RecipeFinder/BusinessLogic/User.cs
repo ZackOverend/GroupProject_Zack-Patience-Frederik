@@ -1,6 +1,9 @@
 ﻿using System;
 namespace RecipeFinder.BusinessLogic;
 
+//Frederik
+
+//Class used as foundation for adding a user as well as setting up their recipe and favourites list, so each person has their individual list.
 
 public class User
 {
@@ -15,6 +18,7 @@ public class User
     public FavouritesManager UserFavourites { get { return _userFavourites; } }
     public RecipeManager RecipeManager { get { return _recipeManager; } }
 
+    //setting up properties
     public int UserId
     {
         get
@@ -26,7 +30,7 @@ public class User
             _userId = value;
         }
     }
-
+    //no empty strings
     public string Name
     {
         get
@@ -40,7 +44,7 @@ public class User
             _name = value;
         }
     }
-
+    //making sure all emails contain an @ sign
     public string Email
     {
         get
@@ -58,6 +62,7 @@ public class User
 
         }
     }
+    //no empty strings
     public string PhoneNumber
     {
         get
@@ -73,6 +78,7 @@ public class User
     }
 
 
+    //setting up parameters for user
 
     public User(int userId, string name, string email, string phoneNumber, FavouritesManager userFavourites, RecipeManager recipeManager)
     {
@@ -83,7 +89,7 @@ public class User
         _userFavourites = userFavourites;
         _recipeManager = recipeManager;
     }
-
+    //method used to return all user information in a neat way, used for presenting the data using databinding in UserPage
     public string GetText()
     {
         return $"ID: {UserId}       Name: {Name} \nEmail: {Email}      Phone Number {PhoneNumber}"; ;
