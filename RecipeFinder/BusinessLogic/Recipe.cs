@@ -1,8 +1,14 @@
-﻿using System;
+﻿//Author: Patience Gleaves
+//StudentID:991711719
+//This class creates the information needed for our recipes to be added to reipes.csv and subsequently the recipe list.
+
+
+using System;
 namespace RecipeFinder.BusinessLogic
 {
     public class Recipe
     {
+        //Since recipes are hardcoded, no need for error handeling at this stage.
 
         private string _recipeName;
         private string _recipeDesc;
@@ -56,7 +62,7 @@ namespace RecipeFinder.BusinessLogic
 
        
 
-        // Due to csvhelper, there is no need for a class constructor. The serialization and deserialization is handled by the public properties
+        // Due to csvhelper, there is no need for a class constructor. The serialization and deserialization is handled by the csv helper package.
 
         //public Recipe(string rname, string recipeDesc, string recipeImage, string recipeInstructions)
         //{
